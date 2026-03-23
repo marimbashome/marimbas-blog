@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide scrollbar for carousel */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Marimbas Design System — tokens for non-Tailwind usage */
+@import '../../_design-system/tokens.css';
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-linen text-charcoal font-sans;
+  }
+
+  h1, h2 {
+    @apply font-serif;
+  }
+
+  ::selection {
+    @apply bg-amber-warm/30;
+  }
+}
+
+@layer components {
+  .container-marimbas {
+    @apply mx-auto max-w-marimbas px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .card-marimbas {
+    @apply bg-white rounded-card shadow-card transition-shadow duration-300 hover:shadow-card-hover;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-chiapas-green text-white rounded-btn font-sans font-medium transition-colors duration-150 hover:bg-chiapas-green-light;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-transparent text-terracotta border-[1.5px] border-terracotta rounded-btn font-sans font-medium transition-all duration-150 hover:bg-terracotta hover:text-white;
+  }
+}

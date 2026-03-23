@@ -1,0 +1,65 @@
+import { Guide } from './types';
+
+export const comunidadesIndigenasChiapasGuide: Guide = {
+  slug: 'comunidades-indigenas-chiapas',
+  title: { es: "Comunidades Indígenas de Chiapas", en: "Indigenous Communities of Chiapas" },
+  subtitle: {
+    es: 'Guía respetuosa para visitar las comunidades mayas y zoques: quiénes son, qué significan sus tradiciones y cómo ser buen visitante.',
+    en: 'A respectful guide to visiting Maya and Zoque communities: who they are, what their traditions mean, and how to be a good visitor.',
+  },
+  heroImage: 'https://images.unsplash.com/photo-1591189863345-271fdde5e4f2?w=800&h=500&fit=crop&q=80',
+  category: 'attraction',
+  region: 'chiapas',
+  readTime: 14,
+  tags: { es: ["indígenas", "cultura", "turismo responsable", "tradición"], en: ["indigenous", "culture", "responsible tourism", "tradition"] },
+  metaTitle: { es: "Comunidades Indígenas de Chiapas: Guía Completa", en: "Indigenous Communities of Chiapas: Complete Guide" },
+  metaDescription: { es: "Descubre el significado cultural profundo de las comunidades mayas y zoques de Chiapas. Guía honesta sobre Chamula, Zinacantán y más.", en: "Discover the deep cultural meaning of Maya and Zoque communities in Chiapas. Honest guide to Chamula, Zinacantán and more." },
+  sections: [
+    {
+      id: 'por-que-esta-guia-es-diferente',
+      title: { es: "¿Por qué esta guía es diferente?", en: "Why This Guide is Different?" },
+      content: { es: `<p>La mayoría de las guías sobre Chamula tienen el mismo problema: describen lo que se ve sin explicar lo que significa. Esta guía va más allá del checklist turístico. Te explicamos quiénes son, cómo se organizan, qué significan sus tradiciones, y las reglas éticas que debes respetar como visitante.</p><p>Chiapas alberga a más de 2 millones de personas que hablan lenguas indígenas. No son un museo viviente: son sociedades complejas, autónomas y orgullosamente independientes del México oficial.</p>`, en: `<p>Most guides to Chamula describe what you see without explaining what it means. This guide goes beyond the tourist checklist. We explain who they are, how they organize themselves, what their traditions mean, and the ethical rules you must respect as a visitor.</p><p>Chiapas is home to over 2 million people who speak indigenous languages. They are not living museums: they are complex, autonomous societies proudly independent of official Mexico.</p>` },
+    },
+    {
+      id: 'los-grupos-etnicos',
+      title: { es: "Los Grupos Étnicos de Chiapas", en: "Ethnic Groups of Chiapas" },
+      content: { es: `<p><strong>Tzotziles (500,000+ hablantes):</strong> El grupo más visible en Los Altos. Tienen control autónomo de sus comunidades, gobierno propio basado en usos y costumbres, vestimenta propia obligatoria según la comunidad.</p><p><strong>Tzeltales:</strong> La segunda familia lingüística más grande. Ocupan la zona forestal chiapaneca. Menos visibles turísticamente pero igualmente organizados.</p><p><strong>Zoques:</strong> Habitan Tuxtla y la zona central. Cultura más antigua que la maya en algunas regiones. El carnaval de Coita es su expresión cultural más visible.</p><p><strong>Lacandones:</strong> Menos de 1,000 personas. Guardianes de la selva Lacandona y sus misterios arqueológicos. Lengua maya diferente al tzotzil. Acceso vía Palenque o San Cristóbal.</p>`, en: `<p><strong>Tzotzil (500,000+ speakers):</strong> The most visible group in the Highlands. They have autonomous control over their communities, their own government based on customs and traditions, and mandatory traditional dress that varies by community.</p><p><strong>Tzeltales:</strong> The second largest linguistic family. They occupy the Chiapas forest zone. Less visible to tourism but equally organized.</p><p><strong>Zoque:</strong> They inhabit Tuxtla and the central zone. An even older culture than the Maya in some regions. The Coita Carnival is their most visible cultural expression.</p><p><strong>Lacandon:</strong> Fewer than 1,000 people. Guardians of the Lacandona jungle and its archaeological mysteries. A Maya language different from Tzotzil. Access via Palenque or San Cristóbal.</p>` },
+    },
+    {
+      id: 'san-juan-chamula',
+      title: { es: "San Juan Chamula: Una Iglesia Única en el Mundo", en: "San Juan Chamula: A Unique Church in the World" },
+      content: { es: `<p><strong>Preparación honesta antes de llegar:</strong> Chamula es un municipio autónomo. La policía mexicana NO puede entrar sin permiso explícito. Tienen sus propias leyes, su propio sistema de justicia, y han expulsado a miles de personas por cambio religioso en décadas pasadas. Esto no es folclore: es un sistema político real y vigente.</p><p><strong>La iglesia de San Juan Bautista:</strong> Es el ejemplo más puro de sincretismo que encontrarás en México. No hay bancas. El suelo está completamente cubierto de ramas de pino fresco (que huele intensamente). Hay miles de velas ardiendo simultáneamente. Los curanderos (h'iloletik) hacen ceremonias religiosas con posh (licor de caña). Los santos católicos conviven con símbolos de la religión maya antigua. NO es una demostración: es una ceremonia religiosa completamente viva.</p><p><strong>REGLA ABSOLUTA:</strong> NO fotografiar dentro de la iglesia bajo ninguna circunstancia. Los "mayoles" (policía de Chamula) intervendrán. Tu equipo puede ser confiscado. Respeta este espacio sagrado.</p><p><strong>El cementerio:</strong> Completamente diferente a cualquier cementerio occidental. Las cruces de madera tienen colores muy específicos: verde significa esperanza, negro se usa para adultos mayores, azul para jóvenes. Cada color tiene un significado preciso en la cosmovisión tzotzil.</p><p><strong>Cómo llegar:</strong> 10 km de San Cristóbal. Combi desde el mercado (aproximadamente $15 pesos). O taxi. La experiencia vale completamente el corto viaje.</p>`, en: `<p><strong>Honest preparation before you arrive:</strong> Chamula is an autonomous municipality. Mexican police CANNOT enter without explicit permission. They have their own laws, their own justice system, and have expelled thousands of people for religious change over past decades. This is not folklore: it is a real and current political system.</p><p><strong>The Church of San Juan Bautista:</strong> It is the purest example of syncretism you will find in Mexico. There are no pews. The floor is completely covered with fresh pine branches (which smell intensely). Thousands of candles burn simultaneously. Healers (h'iloletik) perform religious ceremonies with posh (sugarcane liquor). Catholic saints coexist with symbols of ancient Maya religion. This is NOT a demonstration: it is a completely living religious ceremony.</p><p><strong>ABSOLUTE RULE:</strong> DO NOT photograph inside the church under any circumstances. The "mayoles" (Chamula police) will intervene. Your equipment can be confiscated. Respect this sacred space.</p><p><strong>The cemetery:</strong> Completely different from any Western cemetery. The wooden crosses have very specific colors: green means hope, black is used for elderly adults, blue for young people. Each color has precise meaning in the Tzotzil worldview.</p><p><strong>How to get there:</strong> 10 km from San Cristóbal. Colectivo from the market (approximately $15 pesos). Or taxi. The experience is completely worth the short trip.</p>` },
+    },
+    {
+      id: 'zinacatan-y-mas-comunidades',
+      title: { es: "Zinacantán y Otras Comunidades Indígenas", en: "Zinacantán and Other Indigenous Communities" },
+      content: { es: `<p><strong>Zinacantán — Los Textiles Más Bellos de Chiapas:</strong> Más abierto al turismo que Chamula, más accesible fotográficamente (siempre con permiso). Las tejedoras viven en las casas principales y venden sus textiles directamente. Precios justos, sin regatear. Los huipiles, caminos de mesa y blusas con bordados florales cuestan entre $150 y $800 pesos según complejidad. La iglesia y cementerio están llenos de flores de gladiolo como ofrenda permanente: los zinacantecas creen que los dioses les envían estas flores.</p><p><strong>Tenejapa:</strong> Comunidad tzeltale con un mercado dominical único los domingos. Acceso menos turístico que Chamula o Zinacantán.</p><p><strong>San Andrés Larráinzar:</strong> Textiles tzotziles diferentes a Zinacantán. Otro nivel de especialización textil.</p><p><strong>Amatenango del Valle:</strong> Alfareras mujeres que crean figuras de barro completamente a mano, sin torno. Puedes comprar directamente de productoras.</p><p><strong>Los Zoques de Tuxtla:</strong> Cultura completamente diferente a la maya. El carnaval zoque de Coita es su expresión cultural más espectacular. El posh y tascalate son bebidas zoques tradicionales.</p>`, en: `<p><strong>Zinacantán — The Most Beautiful Textiles of Chiapas:</strong> More open to tourism than Chamula, more photographically accessible (always with permission). The weavers live in the main houses and sell their textiles directly. Fair prices, no haggling. Huipiles, table runners, and blouses with floral embroidery cost between $150 and $800 pesos depending on complexity. The church and cemetery are full of gladiolus flowers as permanent offerings: the Zinacantecos believe that the gods send them these flowers.</p><p><strong>Tenejapa:</strong> A Tzeltale community with a unique Sunday market. Less touristy access than Chamula or Zinacantán.</p><p><strong>San Andrés Larráinzar:</strong> Tzotzil textiles different from Zinacantán. Another level of textile specialization.</p><p><strong>Amatenango del Valle:</strong> Female potters who create clay figures completely by hand, without a pottery wheel. You can buy directly from producers.</p><p><strong>The Zoque of Tuxtla:</strong> A culture completely different from the Maya. The Zoque Carnival of Coita is their most spectacular cultural expression. Posh and tascalate are traditional Zoque drinks.</p>` },
+    },
+    {
+      id: 'reglas-universales',
+      title: { es: "Reglas Universales de Respeto", en: "Universal Rules of Respect" },
+      content: { es: `<ul><li><strong>NO fotografiar sin permiso explícito y verbal.</strong> Pregunta siempre. Si te dicen que no, respeta completamente.</li><li><strong>Respeta espacios sagrados.</strong> Las iglesias, cementerios y rituales no son espectáculos.</li><li><strong>Compra directamente a productores.</strong> No a intermediarios. Tu dinero debe llegar a quien realmente lo necesita.</li><li><strong>No regatees artesanías.</strong> El precio que te dan ya es justo. Son obras de arte, no souvenirs.</li><li><strong>Viste con respeto:</strong> Cubre hombros y rodillas. No es opcional.</li><li><strong>Contrata guías locales</strong> para Chamula. Ellos tienen acceso, contexto, y legitimidad que tú no tienes.</li></ul>`, en: `<ul><li><strong>Do NOT photograph without explicit verbal permission.</strong> Always ask. If they say no, respect it completely.</li><li><strong>Respect sacred spaces.</strong> Churches, cemeteries, and rituals are not spectacles.</li><li><strong>Buy directly from producers.</strong> Not from intermediaries. Your money should reach those who really need it.</li><li><strong>Do not haggle over crafts.</strong> The price they give you is already fair. These are works of art, not souvenirs.</li><li><strong>Dress respectfully:</strong> Cover shoulders and knees. It is not optional.</li><li><strong>Hire local guides</strong> for Chamula. They have access, context, and legitimacy that you don't have.</li></ul>` },
+    },
+  ],
+  itineraries: [
+    {
+      days: '1',
+      title: { es: 'Chamula + Zinacantán', en: 'Chamula + Zinacantán' },
+      description: { es: 'Mañana: San Juan Chamula (iglesia, mercado, cementerio). Tarde: Zinacantán (textiles, iglesia, compras directas a tejedoras). Desde San Cristóbal.', en: 'Morning: San Juan Chamula (church, market, cemetery). Afternoon: Zinacantán (textiles, church, direct purchases from weavers). From San Cristóbal.' },
+    },
+    {
+      days: '3',
+      title: { es: 'Inmersión Cultural Completa', en: 'Complete Cultural Immersion' },
+      description: { es: 'Día 1: Chamula y Zinacantán. Día 2: Tenejapa (mercado dominical) o Amatenango del Valle (alfarería). Día 3: San Andrés Larráinzar + comunidades zoques en ruta a Tuxtla.', en: 'Day 1: Chamula and Zinacantán. Day 2: Tenejapa (Sunday market) or Amatenango del Valle (pottery). Day 3: San Andrés Larráinzar + Zoque communities en route to Tuxtla.' },
+    },
+  ],
+  cta: {
+    title: { es: "Hospédate en Berriozábal o Coita", en: "Stay in Berriozábal or Coita" },
+    description: { es: "Base perfecta para explorar las comunidades indígenas del sureste chiapaneco", en: "Perfect base to explore the indigenous communities of southeastern Chiapas" },
+    properties: [
+      { name: "Berrio. San Gerónimo", zone: "Berriozábal", link: "/properties?zone=Berriozabal" },
+      { name: "Coita. Albita", zone: "Coita", link: "/properties?zone=Coita" },
+    ],
+  },
+  relatedSlugs: ["chiapas", "san-cristobal", "chamula", "artesanias-chiapas-cdmx", "gastronomia-chiapaneca"],
+};

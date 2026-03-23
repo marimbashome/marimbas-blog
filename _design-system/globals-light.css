@@ -1,0 +1,119 @@
+/* ============================================================
+   MARIMBAS HOME — Global Base Styles (Light Theme)
+   Import AFTER tokens.css in guest-facing apps.
+   ============================================================ */
+
+@import './tokens.css';
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--m-font-sans);
+  background: var(--m-surface-primary);
+  color: var(--m-text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: var(--m-font-serif);
+  color: var(--m-charcoal);
+}
+
+::selection {
+  background: rgba(201, 169, 110, 0.3); /* amber-warm/30 */
+}
+
+a {
+  color: var(--m-primary);
+  text-decoration: none;
+  transition: color var(--m-transition-fast);
+}
+a:hover {
+  color: var(--m-primary-hover);
+}
+
+/* ── Utility Classes ──────────────────────────────── */
+.m-container {
+  max-width: var(--m-max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+@media (min-width: 640px) { .m-container { padding: 0 1.5rem; } }
+@media (min-width: 1024px) { .m-container { padding: 0 2rem; } }
+
+.m-section {
+  padding: var(--m-space-16) 0;
+}
+@media (min-width: 768px) { .m-section { padding: var(--m-space-24) 0; } }
+
+.m-card {
+  background: var(--m-surface-card);
+  border-radius: var(--m-radius-lg);
+  box-shadow: var(--m-shadow-card);
+  transition: box-shadow var(--m-transition-base);
+}
+.m-card:hover {
+  box-shadow: var(--m-shadow-card-hover);
+}
+
+.m-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--m-primary);
+  color: var(--m-text-on-primary);
+  border: none;
+  border-radius: var(--m-radius-md);
+  font-family: var(--m-font-sans);
+  font-weight: 500;
+  font-size: var(--m-text-body);
+  cursor: pointer;
+  transition: background var(--m-transition-fast);
+}
+.m-btn-primary:hover {
+  background: var(--m-primary-hover);
+}
+
+.m-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  color: var(--m-secondary);
+  border: 1.5px solid var(--m-secondary);
+  border-radius: var(--m-radius-md);
+  font-family: var(--m-font-sans);
+  font-weight: 500;
+  font-size: var(--m-text-body);
+  cursor: pointer;
+  transition: all var(--m-transition-fast);
+}
+.m-btn-secondary:hover {
+  background: var(--m-secondary);
+  color: var(--m-white);
+}
+
+/* ── Nav Base ─────────────────────────────────────── */
+.m-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  height: var(--m-nav-height);
+  padding: 0 1.5rem;
+  transition: var(--m-transition-base);
+}
+.m-nav.scrolled {
+  background: rgba(250, 247, 242, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: var(--m-shadow-nav);
+}

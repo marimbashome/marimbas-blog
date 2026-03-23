@@ -1,0 +1,97 @@
+/* ============================================================
+   MARIMBAS HOME — Global Base Styles (Dark Theme)
+   Import AFTER tokens.css in admin/internal apps.
+   ============================================================ */
+
+@import './tokens.css';
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--m-font-sans);
+  background: var(--m-dark-bg);
+  color: var(--m-dark-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: var(--m-font-sans);
+  font-weight: 600;
+  color: var(--m-dark-text);
+}
+
+::selection {
+  background: rgba(92, 133, 255, 0.3);
+}
+
+a {
+  color: var(--m-dark-accent);
+  text-decoration: none;
+  transition: color var(--m-transition-fast);
+}
+a:hover {
+  color: #7da0ff;
+}
+
+/* ── Utility Classes (Dark) ───────────────────────── */
+.m-container {
+  max-width: var(--m-max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+@media (min-width: 640px) { .m-container { padding: 0 1.5rem; } }
+@media (min-width: 1024px) { .m-container { padding: 0 2rem; } }
+
+.m-card {
+  background: var(--m-dark-card);
+  border: 1px solid var(--m-dark-border);
+  border-radius: var(--m-radius-lg);
+  transition: border-color var(--m-transition-base);
+}
+.m-card:hover {
+  border-color: var(--m-dark-accent);
+}
+
+.m-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--m-dark-accent);
+  color: var(--m-white);
+  border: none;
+  border-radius: var(--m-radius-md);
+  font-family: var(--m-font-sans);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background var(--m-transition-fast);
+}
+.m-btn-primary:hover {
+  background: #7da0ff;
+}
+
+/* ── Sidebar pattern (admin) ─────────────────────── */
+.m-sidebar {
+  background: #0a0e16;
+  border-right: 1px solid var(--m-dark-border);
+  width: 260px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+.m-main-content {
+  margin-left: 260px;
+  padding: var(--m-space-6);
+  min-height: 100vh;
+}
