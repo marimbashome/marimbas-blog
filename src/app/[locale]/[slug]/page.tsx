@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!guide) return { title: 'Guide not found' };
   const locale = params.locale as Locale;
   const ogLocale = locale === 'es' ? 'es_MX' : 'en_US';
-  const guideUrl = `https://marimbashome.com/blog/${locale}/blog/${params.slug}`;
+  const guideUrl = `https://marimbashome.com/blog/${locale}/${params.slug}`;
 
   return {
     title: t(guide.metaTitle, locale),
@@ -50,8 +50,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: guideUrl,
       languages: {
-        es: `https://marimbashome.com/blog/es/blog/${params.slug}`,
-        en: `https://marimbashome.com/blog/en/blog/${params.slug}`,
+        es: `https://marimbashome.com/blog/es/${params.slug}`,
+        en: `https://marimbashome.com/blog/en/${params.slug}`,
       },
     },
   };
@@ -77,7 +77,7 @@ export default async function BlogGuidePage({ params }: Props) {
   // Build breadcrumbs
   const breadcrumbs: { label: string; href?: string }[] = [
     { label: locale === 'es' ? 'Inicio' : 'Home', href: 'https://marimbashome.com' },
-    { label: 'Blog', href: `/${locale}/blog` },
+    { label: 'Blog', href: `/blog/${locale}` },
   ];
 
   if ((guide.category === 'city' || guide.category === 'neighborhood') && guide.region) {
@@ -87,7 +87,7 @@ export default async function BlogGuidePage({ params }: Props) {
     if (pillarGuide) {
       breadcrumbs.push({
         label: t(pillarGuide.title, locale),
-        href: `/${locale}/blog/${pillarGuide.slug}`,
+        href: `/blog/${locale}/${pillarGuide.slug}`,
       });
     }
   }
@@ -120,7 +120,7 @@ export default async function BlogGuidePage({ params }: Props) {
 
             <article className="flex-1 min-w-0 order-2 lg:order-none">
               <a
-                href={`/${locale}/blog`}
+                href={`/blog/${locale}`}
                 className="inline-flex items-center gap-1.5 text-sm text-adobe hover:text-charcoal transition-colors mb-8"
               >
                 <ArrowLeft className="w-4 h-4" />

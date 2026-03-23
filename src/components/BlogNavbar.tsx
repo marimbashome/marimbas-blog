@@ -14,7 +14,10 @@ export default function BlogNavbar({ locale = 'es' }: BlogNavbarProps) {
 
   // Build alternate locale URL
   const altLocale = locale === 'es' ? 'en' : 'es';
-  const altPath = pathname.replace(`/${locale}/`, `/${altLocale}/`);
+  // Handle both /es and /es/slug patterns
+  const altPath = pathname === `/${locale}`
+    ? `/${altLocale}`
+    : pathname.replace(`/${locale}/`, `/${altLocale}/`);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-sand/50">
@@ -35,7 +38,7 @@ export default function BlogNavbar({ locale = 'es' }: BlogNavbarProps) {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-6">
           <a
-            href={`/blog/${locale}/blog`}
+            href={`/blog/${locale}`}
             className="text-sm font-medium text-charcoal hover:text-chiapas-green transition-colors"
           >
             {locale === 'es' ? 'Todas las guías' : 'All guides'}
@@ -77,7 +80,7 @@ export default function BlogNavbar({ locale = 'es' }: BlogNavbarProps) {
       {isOpen && (
         <div className="md:hidden bg-white border-t border-sand/50 py-4">
           <div className="container-marimbas flex flex-col gap-3">
-            <a href={`/blog/${locale}/blog`} className="text-sm font-medium text-charcoal py-2">
+            <a href={`/blog/${locale}`} className="text-sm font-medium text-charcoal py-2">
               {locale === 'es' ? 'Todas las guías' : 'All guides'}
             </a>
             <a href="https://book.marimbashome.com" className="text-sm font-medium text-charcoal py-2">

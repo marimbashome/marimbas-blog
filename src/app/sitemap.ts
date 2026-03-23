@@ -11,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog listing pages
   for (const locale of locales) {
     entries.push({
-      url: `${baseUrl}/${locale}/blog`,
+      url: `${baseUrl}/${locale}`,
       lastModified: now,
       changeFrequency: 'weekly',
       priority: 0.9,
@@ -22,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const guide of allGuides) {
     for (const locale of locales) {
       entries.push({
-        url: `${baseUrl}/${locale}/blog/${guide.slug}`,
+        url: `${baseUrl}/${locale}/${guide.slug}`,
         lastModified: now,
         changeFrequency: 'monthly',
         priority: guide.category === 'pillar' ? 0.8 : 0.6,

@@ -33,7 +33,7 @@ export default function BlogFooter({ locale = 'es' }: BlogFooterProps) {
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href={`/blog/${locale}/blog`} className="hover:text-white transition-colors">
+                <a href={`/blog/${locale}`} className="hover:text-white transition-colors">
                   {locale === 'es' ? 'Todas las guías' : 'All guides'}
                 </a>
               </li>

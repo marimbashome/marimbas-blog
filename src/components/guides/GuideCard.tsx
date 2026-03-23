@@ -60,7 +60,7 @@ export function GuideCard({ slug, title, subtitle, tags, readTime, category, loc
 
   return (
     <a
-      href={`/${locale}/blog/${slug}`}
+      href={`/blog/${locale}/${slug}`}
       className={cn(
         'group block bg-linen border border-sand rounded-xl overflow-hidden hover:shadow-card-hover transition-all duration-300',
         featured && 'sm:col-span-2 md:flex'
