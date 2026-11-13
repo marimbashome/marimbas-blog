@@ -8,13 +8,15 @@ import Script from 'next/script';
 const GA_ID = 'G-Q1NXNXMPMS';
 const ADSENSE_PUB = 'ca-pub-5779958677522085';
 
+// Since Next 15, route params arrive as a promise.
 export default async function LocaleLayout({
   children,
-  params: { locale },
+  params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }

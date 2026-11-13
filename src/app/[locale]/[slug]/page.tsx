@@ -9,8 +9,9 @@ import { getAffiliateLinksForGuide, getGenericAffiliateLinks } from '@/lib/affil
 import type { Locale } from '@/data/guides';
 import { ArrowLeft } from 'lucide-react';
 
+// Since Next 15, route params arrive as a promise.
 interface Props {
-  params: { locale: string; slug: string };
+  params: Promise<{ locale: string; slug: string }>;
 }
 
 export async function generateStaticParams() {
@@ -20,7 +21,8 @@ export async function generateStaticParams() {
   );
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params;
   const guide = getGuideBySlug(params.slug);
   if (!guide) return { title: 'Guide not found' };
   const locale = params.locale as Locale;
@@ -57,7 +59,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function BlogGuidePage({ params }: Props) {
+export default async function BlogGuidePage(props: Props) {
+  const params = await props.params;
   const guide = getGuideBySlug(params.slug);
   if (!guide) notFound();
 

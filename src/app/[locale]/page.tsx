@@ -7,8 +7,9 @@ import { allGuides, t, tArr } from '@/data/guides';
 import type { Guide, Locale } from '@/data/guides';
 import { Compass, Instagram, ArrowRight } from 'lucide-react';
 
+// Since Next 15, route params arrive as a promise.
 interface Props {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
 /** Category group labels for each region */
@@ -66,7 +67,8 @@ function groupGuidesByCategory(guides: Guide[]): Record<string, Guide[]> {
   return grouped;
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params;
   const tr = await getTranslations({ locale: params.locale, namespace: 'guides' });
   const locale = params.locale as Locale;
   const ogLocale = locale === 'es' ? 'es_MX' : 'en_US';
@@ -97,7 +99,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function BlogListingPage({ params }: Props) {
+export default async function BlogListingPage(props: Props) {
+  const params = await props.params;
   const tr = await getTranslations({ locale: params.locale, namespace: 'guides' });
   const locale = params.locale as Locale;
 
